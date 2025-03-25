@@ -42,10 +42,10 @@ While foundation models have revolutionised computer vision, their effectiveness
 An example command to run the code is given below:
 
 After downloading the .zip file into `./sketchfusion/`, run the following,
-
-`bash setup.sh`
-
-`python ./sketchfusion/src/SD_CLIP/pck_train_combined.py --config ./sketchfusion/src/SD_CLIP/configs/train_sketch.yaml`
+```shell
+$ bash setup.sh
+$ python ./sketchfusion/src/SD_CLIP/pck_train_combined.py --config ./sketchfusion/src/SD_CLIP/configs/train_sketch.yaml
+```
 
 
 ## Qualitative Results

@@ -50,19 +50,17 @@ After downloading the .zip file into `./sketchfusion/`, run the following,
 ## Qualitative Results
 
 Qualitative results of ZS-SBIR on Sketchy by a baseline (blue) method vs Ours (green).
-![qualitative_category](https://github.com/aneeshan95/Sketch_LVM/blob/main/static/images/qual_cat.png?raw=true)
+![qualitative_FG](https://github.com/TapasKumarDutta1/SketchFusion/blob/main/static/correspondence.jpg?raw=true)
 
 
 Qualitative results of FG-ZS-SBIR on Sketchy by a baseline (blue) method vs Ours (green). The images are arranged in increasing order of the ranks beside their corresponding sketch-query, i.e the left-most image was retrieved at rank-1 for every category. The true-match for every query, if appearing in top-5 is marked in a green frame. Numbers denote the rank at which that true-match is retrieved for every corresponding sketch-query.
-![qualitative_FG](https://github.com/aneeshan95/Sketch_LVM/blob/main/static/images/qual_FG.png?raw=true)
+![qualitative_FG](https://github.com/TapasKumarDutta1/SketchFusion/blob/main/static/seg.jpg?raw=true)
 
 
 ## Quantitative Results
 
 Quantitative results of our method against a few SOTAs.
-![qualitative_FG](https://github.com/TapasKumarDutta1/SketchFusion/blob/main/static/correspondence.jpg?raw=true)
 
-![qualitative_FG](https://github.com/TapasKumarDutta1/SketchFusion/blob/main/static/seg.jpg?raw=true)
 
 
 ## Credits

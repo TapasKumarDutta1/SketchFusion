@@ -1,71 +1,53 @@
-# Sketch_LVM
-### Official repository of _CLIP for All Things Zero-Shot Sketch-Based Image Retrieval, Fine-Grained or Not_
-## **CVPR 2023**
-
-[![paper](https://img.shields.io/badge/arXiv-Paper-brightgreen)](https://arxiv.org/pdf/2303.13440.pdf)
-[![supplement](https://img.shields.io/badge/Supplementary-Material-F9D371)](https://openaccess.thecvf.com/content/CVPR2023/supplemental/Sain_CLIP_for_All_CVPR_2023_supplemental.pdf)
-[![video](https://img.shields.io/badge/Video-Presentation-B85252)](https://www.youtube.com/watch?v=ImcQFsS1SfE)
-[![Project Page](https://img.shields.io/badge/Project-Page-blue)](https://aneeshan95.github.io/Sketch_LVM/)
+# SketchFusion: Learning Universal Sketch Features through Fusing Foundation Models
+### Official repository of ``SketchFusion: Learning Universal Sketch Features through Fusing Foundation Models``
+## **Under review in CVPR 2025**
 
 ## Abstract
  
-![teaser](https://github.com/aneeshan95/Sketch_LVM/blob/main/static/images/opener.png?raw=true)
+![abs](./static/teaser.png?raw=true)
+
  
-In this paper, we leverage CLIP for zero-shot sketch based image retrieval (ZS-SBIR). We are largely inspired by recent advances on foundation models and the unparalleled generalisation ability they seem to offer, but for the first time tailor it to benefit the sketch community. We put forward novel designs on how best to achieve this synergy, for both the category setting and the fine-grained setting ("all"). At the very core of our solution is a prompt learning setup. First we show just via factoring in sketch-specific prompts, we already have a category-level ZS-SBIR system that overshoots all prior arts, by a large margin (24.8%) - a great testimony on studying the CLIP and ZS-SBIR synergy. Moving onto the fine-grained setup is however trickier, and requires a deeper dive into this synergy. For that, we come up with two specific designs to tackle the fine-grained matching nature of the problem: (i) an additional regularisation loss to ensure the relative separation between sketches and photos is uniform across categories, which is not the case for the gold standard standalone triplet loss, and (ii) a clever patch shuffling technique to help establishing instance-level structural correspondences between sketch-photo pairs. With these designs, we again observe significant performance gains in the region of 26.9% over previous state-of-the-art. The take-home message, if any, is the proposed CLIP and prompt learning paradigm carries great promise in tackling other sketch-related tasks (not limited to ZS-SBIR) where data scarcity remains a great challenge.
+While foundation models have revolutionised computer vision, their effectiveness for sketch understanding remains limited by the unique challenges of abstract, sparse visual inputs. Through systematic analysis, we uncover two fundamental limitations: Stable Diffusion (SD) struggles to extract meaningful features from abstract sketches (unlike its success with photos), and exhibits a pronounced frequency-domain bias that suppresses essential low-frequency components needed for sketch understanding. Rather than costly retraining, we address these limitations by strategically combining SD with CLIP, whose strong semantic understanding naturally compensates for SD's spatial-frequency biases. By dynamically injecting CLIP features into SD's denoising process and adaptively aggregating features across semantic levels, our method achieves state-of-the-art performance in sketch retrieval (+3.35\%), recognition (+1.06\%), segmentation (+29.42\%), and correspondence learning (+21.22\%), demonstrating the first truly universal sketch feature representation in the era of foundation models.
 
 ## Architecture
 
-Cross-category FG-ZS-SBIR. A common (photo-sketch) learnable visual prompt shared across categories is trained using CLIP’s image encoder over three losses as shown. CLIP’s text-encoder based classification loss is used during training.
-
-![arch](https://github.com/aneeshan95/Sketch_LVM/blob/main/static/images/arch.png?raw=true)
+![arch](./static/arch.png?raw=true)
 
 ## Datasets
-- For ZS-SBIR:
-  - [Sketchy](https://drive.google.com/file/d/1vGtssYgM6_r0ph8f_ZPWzIHvHL0yS8CN/view?usp=sharing) (extended).
-  - [TUBerlin](https://github.com/AnjanDutta/sem-pcyc/).
-  - [QuickDraw](https://github.com/googlecreativelab/quickdraw-dataset) (a smaller version).
-- For Fine-grained ZS-SBIR:
-  - [Sketchy](https://github.com/AnjanDutta/sem-pcyc/) (basic) dataset having fine-grained sketch-photo associations.
+- For Category-level ZS-SBIR:
+  - [Sketchy](https://dl.acm.org/doi/10.1145/2897824.2925954)
+  - [TUBerlin](https://cybertron.cg.tu-berlin.de/eitz/projects/classifysketch/sketches_png.zip)
+  - [QuickDraw](https://github.com/googlecreativelab/quickdraw-dataset)
+- For ZS-FG-SBIR:
+  - [Sketchy](https://dl.acm.org/doi/10.1145/2897824.2925954)
+- For Sketch-Recognition:
+  - [TUBerlin](https://cybertron.cg.tu-berlin.de/eitz/projects/classifysketch/sketches_png.zip)
+  - [QuickDraw](https://github.com/googlecreativelab/quickdraw-dataset)
+- For Sketch-photo Correspondence
+  - [PSC6K](https://github.com/cogtoolslab/photo-sketch-correspondence/blob/main/PSC6K_Benchmark_README.md)
+- For Sketch-Based Image Segmentation:
+  - [Sketchy](https://dl.acm.org/doi/10.1145/2897824.2925954)
 
 
-## Code
+## How to run the code?
  
- A workable basic version of the code for CLIP adapted for ZS-SBIR has been uploaded.
- - `src` folder holds the source files.
- - `experiments` folder holds the executable wrapper for the model with particular specifications.
+ A version of the code for SketchFusion, adapted for the Sketch-photo Correspondence task has been released during the review period. Code for remaining downstream tasks will be published after acceptance.
+ - The `src` folder holds the source files.
 
 An example command to run the code is given below:
-```shell
-$ cd Sketch_LVM
-$ python -m experiments.LN_prompt --exp_name=LN_prompt --n_prompts=3 --clip_LN_lr=1e-6 --prompt_lr=1e-4 --batch_size=192 --workers=128
-```
 
-## Qualitative Results
+After downloading the .zip file into `./sketchfusion/`, run the following,
 
-Qualitative results of ZS-SBIR on Sketchy by a baseline (blue) method vs Ours (green).
-![qualitative_category](https://github.com/aneeshan95/Sketch_LVM/blob/main/static/images/qual_cat.png?raw=true)
+`bash setup.sh`
 
+`python ./sketchfusion/src/SD_CLIP/pck_train_combined.py --config ./sketchfusion/src/SD_CLIP/configs/train_sketch.yaml`
 
-Qualitative results of FG-ZS-SBIR on Sketchy by a baseline (blue) method vs Ours (green). The images are arranged in increasing order of the ranks beside their corresponding sketch-query, i.e the left-most image was retrieved at rank-1 for every category. The true-match for every query, if appearing in top-5 is marked in a green frame. Numbers denote the rank at which that true-match is retrieved for every corresponding sketch-query.
-![qualitative_FG](https://github.com/aneeshan95/Sketch_LVM/blob/main/static/images/qual_FG.png?raw=true)
+## Credits
 
+This repository is built on top of [CLIP](https://github.com/openai/CLIP.git), [DIFT](https://github.com/Tsingularity/dift), and [Geo-Aware](https://github.com/Junyi42/GeoAware-SC.git).
+Thanks to the authors.
 
-## Quantitative Results
+## License
+MIT License
 
-Quantitative results of our method against a few SOTAs.
-![qualitative_FG](https://github.com/aneeshan95/Sketch_LVM/blob/main/static/images/quant.png?raw=true)
-
-
-The code for cross-category Fine-Grained ZS-SBIR will be uploaded in some time.
-
-## Bibtex
-
-Please cite our work if you found it useful. Thanks.
-```
-@Inproceedings{sain2023clip,
-  title={{CLIP for All Things Zero-Shot Sketch-Based Image Retrieval, Fine-Grained or Not}},
-  author={Aneeshan Sain and Ayan Kumar Bhunia and Pinaki Nath Chowdhury and Subhadeep Koley and Tao Xiang and Yi-Zhe Song},
-  booktitle={CVPR},
-  year={2023}
-}
-```
+Copyright (c) 2024 Authors et al.

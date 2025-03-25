@@ -3,7 +3,7 @@
 ## **CVPR 2025**
 [![paper](https://img.shields.io/badge/arXiv-Paper-brightgreen)](https://arxiv.org/pdf/2503.14129)
 [![supplement](https://img.shields.io/badge/Supplementary-Material-F9D371)](https://openreview.net/attachment?id=OQ7Fn5TPjK&name=pdf)
-[![video](https://img.shields.io/badge/Video-Presentation-B85252)](https://www.youtube.com/watch?v=ImcQFsS1SfE)
+[![video](https://img.shields.io/badge/Video-Presentation-B85252)](https://openreview.net/attachment?id=OQ7Fn5TPjK&name=pdf)
 [![Project Page](https://img.shields.io/badge/Project-Page-blue)](https://subhadeepkoley.github.io/SketchFusion/)
 
 ## Abstract

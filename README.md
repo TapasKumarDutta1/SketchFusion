@@ -49,7 +49,9 @@ After downloading the .zip file into `./sketchfusion/`, run the following,
 
 ## Qualitative Results
 
-Qualitative results of ZS-SBIR on Sketchy by a baseline (blue) method vs Ours (green).
+Qualitative results of Sketch-photo Correspondence. 
+<span style="color:green">Green</span> circles and squares depict source and
+GT points respectively, while <span style="color:red">Red</span> squares denote predicted points
 ![qualitative_FG](https://github.com/TapasKumarDutta1/SketchFusion/blob/main/static/correspondence.jpg?raw=true)
 
 

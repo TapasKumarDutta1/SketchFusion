@@ -1,6 +1,10 @@
 # SketchFusion: Learning Universal Sketch Features through Fusing Foundation Models
 ### Official repository of ``SketchFusion: Learning Universal Sketch Features through Fusing Foundation Models``
-## **Under review in CVPR 2025**
+## **CVPR 2025**
+[![paper](https://img.shields.io/badge/arXiv-Paper-brightgreen)](https://arxiv.org/pdf/2503.14129)
+[![supplement](https://img.shields.io/badge/Supplementary-Material-F9D371)](https://openreview.net/attachment?id=OQ7Fn5TPjK&name=pdf)
+[![video](https://img.shields.io/badge/Video-Presentation-B85252)](https://www.youtube.com/watch?v=ImcQFsS1SfE)
+[![Project Page](https://img.shields.io/badge/Project-Page-blue)](https://subhadeepkoley.github.io/SketchFusion/)
 
 ## Abstract
  

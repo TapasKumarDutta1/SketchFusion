@@ -60,7 +60,9 @@ Qualitative results of FG-ZS-SBIR on Sketchy by a baseline (blue) method vs Ours
 ## Quantitative Results
 
 Quantitative results of our method against a few SOTAs.
-![qualitative_FG](https://github.com/aneeshan95/Sketch_LVM/blob/main/static/images/quant.png?raw=true)
+![qualitative_FG](https://github.com/TapasKumarDutta1/SketchFusion/blob/main/static/correspondence.jpg?raw=true)
+
+![qualitative_FG](https://github.com/TapasKumarDutta1/SketchFusion/blob/main/static/seg.jpg?raw=true)
 
 
 ## Credits

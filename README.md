@@ -46,12 +46,36 @@ After downloading the .zip file into `./sketchfusion/`, run the following,
 
 `python ./sketchfusion/src/SD_CLIP/pck_train_combined.py --config ./sketchfusion/src/SD_CLIP/configs/train_sketch.yaml`
 
+
+## Qualitative Results
+
+Qualitative results of ZS-SBIR on Sketchy by a baseline (blue) method vs Ours (green).
+![qualitative_category](https://github.com/aneeshan95/Sketch_LVM/blob/main/static/images/qual_cat.png?raw=true)
+
+
+Qualitative results of FG-ZS-SBIR on Sketchy by a baseline (blue) method vs Ours (green). The images are arranged in increasing order of the ranks beside their corresponding sketch-query, i.e the left-most image was retrieved at rank-1 for every category. The true-match for every query, if appearing in top-5 is marked in a green frame. Numbers denote the rank at which that true-match is retrieved for every corresponding sketch-query.
+![qualitative_FG](https://github.com/aneeshan95/Sketch_LVM/blob/main/static/images/qual_FG.png?raw=true)
+
+
+## Quantitative Results
+
+Quantitative results of our method against a few SOTAs.
+![qualitative_FG](https://github.com/aneeshan95/Sketch_LVM/blob/main/static/images/quant.png?raw=true)
+
+
 ## Credits
 
 This repository is built on top of [CLIP](https://github.com/openai/CLIP.git), [DIFT](https://github.com/Tsingularity/dift), and [Geo-Aware](https://github.com/Junyi42/GeoAware-SC.git).
 Thanks to the authors.
 
-## License
-MIT License
+## Bibtex
 
-Copyright (c) 2024 Authors et al.
+Please cite our work if you found it useful. Thanks.
+```
+@Inproceedings{koley2025sketchfusion,
+  title={{SketchFusion: Learning Universal Sketch Features through Fusing Foundation Models}},
+  author={Subhadeep Koley and Tapas Kumar Dutta and Aneeshan Sain and Pinaki Nath Chowdhury and Ayan Kumar Bhunia and Yi-Zhe Song},
+  booktitle={CVPR},
+  year={2025}
+}
+```

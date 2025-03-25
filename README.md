@@ -58,7 +58,7 @@ GT points respectively, while <span style="color:red">Red</span> squares denote 
 
 Qualitative results for sketch-based image segmentation.
 Given a query sketch, our method generates separate segmentation
-masks for all images of that category. (Zoom-in for the best view.)
+masks for all images of that category. 
 ![qualitative_FG](https://github.com/TapasKumarDutta1/SketchFusion/blob/main/static/seg.jpg?raw=true)
 
 
@@ -66,6 +66,13 @@ masks for all images of that category. (Zoom-in for the best view.)
 
 Quantitative results of our method against a few SOTAs.
 
+![qualitative_FG](https://github.com/TapasKumarDutta1/SketchFusion/blob/main/static/category_level_ZS-SBIR.png?raw=true)
+
+![qualitative_FG](https://github.com/TapasKumarDutta1/SketchFusion/blob/main/static/sketch_recognition.png?raw=true)
+
+![qualitative_FG](https://github.com/TapasKumarDutta1/SketchFusion/blob/main/static/point_correspondece.png?raw=true)
+
+![qualitative_FG](https://github.com/TapasKumarDutta1/SketchFusion/blob/main/static/segmentation.png?raw=true)
 
 
 ## Credits

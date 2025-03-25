@@ -70,7 +70,7 @@ Quantitative results of our method against a few SOTAs.
 
 ![qualitative_FG](https://github.com/TapasKumarDutta1/SketchFusion/blob/main/static/sketch_recognition.png?raw=true)
 
-![qualitative_FG](https://github.com/TapasKumarDutta1/SketchFusion/blob/main/static/point_correspondece.png?raw=true)
+![qualitative_FG](https://github.com/TapasKumarDutta1/SketchFusion/blob/main/static/point_correspondence.png?raw=true)
 
 ![qualitative_FG](https://github.com/TapasKumarDutta1/SketchFusion/blob/main/static/segmentation.png?raw=true)
 

@@ -99,7 +99,7 @@ Thanks to the authors.
 
 Please cite our work if you found it helpful. Thanks.
 ```
-@Inproceedings{koley2025sketchfusion,
+@inproceedings{koley2025sketchfusion,
   title={{SketchFusion: Learning Universal Sketch Features through Fusing Foundation Models}},
   author={Subhadeep Koley and Tapas Kumar Dutta and Aneeshan Sain and Pinaki Nath Chowdhury and Ayan Kumar Bhunia and Yi-Zhe Song},
   booktitle={CVPR},

@@ -7,15 +7,16 @@
 
 ## Abstract
 
- 
-![abs](./static/teaser.png?raw=true)
-
+<p align="center">
+<img src="./static/teaser.png" width="900">
+</p>
  
 While foundation models have revolutionised computer vision, their effectiveness for sketch understanding remains limited by the unique challenges of abstract, sparse visual inputs. Through systematic analysis, we uncover two fundamental limitations: Stable Diffusion (SD) struggles to extract meaningful features from abstract sketches (unlike its success with photos), and exhibits a pronounced frequency-domain bias that suppresses essential low-frequency components needed for sketch understanding. Rather than costly retraining, we address these limitations by strategically combining SD with CLIP, whose strong semantic understanding naturally compensates for SD's spatial-frequency biases. By dynamically injecting CLIP features into SD's denoising process and adaptively aggregating features across semantic levels, our method achieves state-of-the-art performance in sketch retrieval (+3.35\%), recognition (+1.06\%), segmentation (+29.42\%), and correspondence learning (+21.22\%), demonstrating the first truly universal sketch feature representation in the era of foundation models.
 
 ## Architecture
-
-![arch](./static/arch.png?raw=true)
+<p align="center">
+<img src="./static/arch.png" width="500">
+</p>
 
 ## Datasets
 - For Category-level ZS-SBIR:
@@ -44,30 +45,49 @@ $ python ./sketchfusion/src/SD_CLIP/pck_train_combined.py --config ./sketchfusio
 
 
 ## Qualitative Results
-
+<p align="center">
+<img src="./static/correspondence.jpg" width="700">
+</p>
+<br>
 Qualitative results of Sketch-Photo Correspondence. 
 <span style="color:green">Green</span> circles and squares depict source and
 GT points respectively, while <span style="color:red">Red</span> squares denote predicted points
-![qualitative_FG](https://github.com/TapasKumarDutta1/SketchFusion/blob/main/static/correspondence.jpg?raw=true)
 
-
+<br>
+<br>
+ 
+<p align="center">
+<img src="./static/seg.jpg" width="700">
+</p>
+<br>
 Qualitative results for sketch-based image segmentation.
 Given a query sketch, our method generates separate segmentation
 masks for all images of that category. 
-![qualitative_FG](https://github.com/TapasKumarDutta1/SketchFusion/blob/main/static/seg.jpg?raw=true)
 
 
 ## Quantitative Results
 
 Quantitative results of our method against a few SOTAs.
-
-![qualitative_FG](https://github.com/TapasKumarDutta1/SketchFusion/blob/main/static/category_level_ZS-SBIR.png?raw=true)
-
-![qualitative_FG](https://github.com/TapasKumarDutta1/SketchFusion/blob/main/static/sketch_recognition.png?raw=true)
-
-![qualitative_FG](https://github.com/TapasKumarDutta1/SketchFusion/blob/main/static/point_correspondence.png?raw=true)
-
-![qualitative_FG](https://github.com/TapasKumarDutta1/SketchFusion/blob/main/static/segmentation.png?raw=true)
+<br>
+<p align="center">
+<img src="./static/category_level_ZS-SBIR.png" width="600">
+</p>
+<br>
+<br>
+<p align="center">
+<img src="./static/sketch_recognition.png" width="600">
+</p>
+<br>
+<br>
+<p align="center">
+<img src="./static/point_correspondence.png" width="600">
+</p>
+<br>
+<br>
+<p align="center">
+<img src="./static/segmentation.png" width="600">
+</p>
+<br>
 
 
 ## Credits

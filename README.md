@@ -46,7 +46,7 @@ $ python ./sketchfusion/src/SD_CLIP/pck_train_combined.py --config ./sketchfusio
 
 ## Qualitative Results
 <p align="center">
-<img src="./static/correspondence.jpg" width="700">
+<img src="./static/correspondence.jpg" width="600">
 </p>
 <br>
 Qualitative results of Sketch-Photo Correspondence. 
@@ -57,7 +57,7 @@ GT points respectively, while <span style="color:red">Red</span> squares denote 
 <br>
  
 <p align="center">
-<img src="./static/seg.jpg" width="700">
+<img src="./static/seg.jpg" width="600">
 </p>
 <br>
 Qualitative results for sketch-based image segmentation.

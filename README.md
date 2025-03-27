@@ -2,7 +2,7 @@
 ### Official repository of ``SketchFusion: Learning Universal Sketch Features through Fusing Foundation Models``
 ## **CVPR 2025**
 [![paper](https://img.shields.io/badge/arXiv-Paper-brightgreen)](https://arxiv.org/pdf/2503.14129)
-[![video](https://img.shields.io/badge/Video-Presentation-B85252)](https://subhadeepkoley.github.io/SketchFusion/)
+[![video](https://img.shields.io/badge/Video-Presentation-B85252)]()
 [![Project Page](https://img.shields.io/badge/Project-Page-blue)](https://subhadeepkoley.github.io/SketchFusion/)
 
 ## Abstract
@@ -27,18 +27,14 @@ While foundation models have revolutionised computer vision, their effectiveness
 - For Sketch-Recognition:
   - [TUBerlin](https://cybertron.cg.tu-berlin.de/eitz/projects/classifysketch/sketches_png.zip)
   - [QuickDraw](https://github.com/googlecreativelab/quickdraw-dataset)
-- For Sketch-photo Correspondence
+- For Sketch-Photo Correspondence
   - [PSC6K](https://github.com/cogtoolslab/photo-sketch-correspondence/blob/main/PSC6K_Benchmark_README.md)
 - For Sketch-Based Image Segmentation:
   - [Sketchy](https://dl.acm.org/doi/10.1145/2897824.2925954)
 
 
 ## How to run the code?
- 
- A version of the code for SketchFusion, adapted for the Sketch-photo Correspondence task has been released during the review period. Code for remaining downstream tasks will be published after acceptance.
- - The `src` folder holds the source files.
-
-An example command to run the code is given below:
+The `src` folder holds the source files. An example command to run the code is given below:
 
 After downloading the .zip file into `./sketchfusion/`, run the following,
 ```shell
@@ -49,7 +45,7 @@ $ python ./sketchfusion/src/SD_CLIP/pck_train_combined.py --config ./sketchfusio
 
 ## Qualitative Results
 
-Qualitative results of Sketch-photo Correspondence. 
+Qualitative results of Sketch-Photo Correspondence. 
 <span style="color:green">Green</span> circles and squares depict source and
 GT points respectively, while <span style="color:red">Red</span> squares denote predicted points
 ![qualitative_FG](https://github.com/TapasKumarDutta1/SketchFusion/blob/main/static/correspondence.jpg?raw=true)
@@ -81,7 +77,7 @@ Thanks to the authors.
 
 ## Bibtex
 
-Please cite our work if you found it useful. Thanks.
+Please cite our work if you found it helpful. Thanks.
 ```
 @Inproceedings{koley2025sketchfusion,
   title={{SketchFusion: Learning Universal Sketch Features through Fusing Foundation Models}},
